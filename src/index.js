@@ -7,9 +7,11 @@ import { BrowserRouter } from 'react-router-dom';
 
 
 ReactDOM.render(
-    <BrowserRouter forceRefresh={true}>
-        <App /> 
-    </BrowserRouter>,
+    <React.StrictMode>
+        <BrowserRouter forceRefresh={true}>
+            <App /> 
+        </BrowserRouter>
+    </React.StrictMode>,
     document.getElementById('root')
 
 );
