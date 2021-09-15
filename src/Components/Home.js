@@ -1,8 +1,7 @@
 import React from 'react';
 import '../App.scss';
 import { Button } from 'reactstrap';
-import { Link } from "react-router-dom";
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { HashLink as Link } from 'react-router-hash-link';
 
 function Home() {
     return (
@@ -15,36 +14,31 @@ function Home() {
                     <p className="lead">Young professional with a passion for data, coding, and puzzles</p>
                 </div>
                 <div className="spacy">
-                    <Button color="primary" size="lg" href="#con">
-                        Contact
+                    <Button color="primary" size="lg" > 
+                        <Link
+                            to="../Components/Home#con"
+                            scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                            style={{ color: "white", textDecoration: 'none' }}
+                        >Contact</Link>
                     </Button>
-                    <Button color="primary" size="lg" href="#pro">
-                        Projects
+                    <Button color="primary" size="lg" style={{ color: "white", textDecoration: 'none' }}>
+                        <Link
+                            to="../Components/Home#pro"
+                            scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                            style={{ color: "white", textDecoration: 'none' }}
+                        >Projects</Link>
                     </Button>
-                    <Button color="primary" size="lg" href="#resume">
-                        Resume
+                    <Button color="primary" size="lg" style={{ color: "white", textDecoration: 'none' }}>
+                        <Link
+                            to="../Components/Home#resume"
+                            scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                            style={{ color: "white", textDecoration: 'none' }}
+                        >Resume</Link>
                     </Button>
-                    <Link to="../Components/Canterbury">
-                        <Button color="primary" size="lg" href="#Canterbury">
-                            Canterbury Puzzle
-                        </Button>
-                    </Link>
                 </div>
-                <div className="spacy">
-                    <div className="Iconspace">
-                        <a href={"https://github.com/CaitlynCarver"}>
-                            <FaGithub size={30} style={{ color: "#af9a7d" }}/> 
-                        </a>
-                        <a href={"https://www.linkedin.com/in/caitlyn-carver-618379104/"}>
-                            <FaLinkedinIn size={30} style={{ color: "#af9a7d" }}/>
-                        </a>
-                        <a href={"https://github.com/Mentaltrain"}>
-                            <FaGithub size={30} style={{ color: "#af9a7d" }}/>
-                        </a>
-                    </div>
-                </div>
+                
             </div>
-            
+      
             <div id="resume"></div>
 
             <div class="row">

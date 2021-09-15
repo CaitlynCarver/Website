@@ -3,7 +3,6 @@ import logo from '../websiteback.png';
 import { FaAlignRight } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 
-
 export default class NavBarPage extends Component {
     state = {
         isOpen: false
@@ -29,13 +28,17 @@ export default class NavBarPage extends Component {
                                     <Link to="../Components/Home">Home</Link>
                                 </li>
                                 <li>
-                                    <Link to="../Components/Home#resume">Resume</Link>
+                                    <Link to="../Components/Canterbury">Canterbury</Link>
                                 </li>
                                 <li>
-                                    <Link to="../Components/Home#pro">Projects</Link>
+                                    <a href={"https://github.com/CaitlynCarver"}>
+                                        Github
+                                    </a>
                                 </li>
                                 <li>
-                                    <Link to="../Components/Canterbury" >Canterbury</Link>
+                                    <a href={"https://www.linkedin.com/in/caitlyn-carver-618379104/"}>
+                                        LinkedIn
+                                    </a>
                                 </li>
                             </ul>
                 </div>
